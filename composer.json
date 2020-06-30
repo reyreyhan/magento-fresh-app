@@ -47,6 +47,7 @@
         "phpseclib/mcrypt_compat": "1.0.8",
         "phpseclib/phpseclib": "2.0.*",
         "ramsey/uuid": "~3.8.0",
+        "staempfli/magento2-code-generator": "^1.11",
         "symfony/console": "~4.1.0",
         "symfony/event-dispatcher": "~4.1.0",
         "symfony/process": "~4.1.0",
