@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * reyhan_sum2_sum2_index
+ * @copyright Copyright © 2019 Reyhan. All rights reserved.
+ * @author    newrey9227@gmail.com
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="page.main.actions">
+            <block class="Magento\Backend\Block\Store\Switcher" name="reyhan_sum2_sum2.store.switcher" template="Magento_Backend::store/switcher.phtml" >
+                <action method="setUseConfirm">
+                    <argument name="params" xsi:type="string">1</argument>
+                </action>
+            </block>
+        </referenceContainer>
+        <referenceContainer name="content">
+            <uiComponent name="reyhan_sum2_sum2_listing"/>
+        </referenceContainer>
+    </body>
+</page>
+

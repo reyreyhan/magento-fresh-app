@@ -1,0 +1,16 @@
+{
+  "name": "reyhan/magento2-module-sum",
+  "description": "Reyhan Magento2 module Sum",
+  "require": {
+    "php": "~7.0.0"
+  },
+  "type": "magento2-module",
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Reyhan\\Sum\\": ""
+    }
+  }
+}

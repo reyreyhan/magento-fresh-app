@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * reyhan_sum_sum_form
+ * @copyright Copyright © 2019 Reyhan. All rights reserved.
+ * @author    newrey9227@gmail.com
+ */
+-->
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">reyhan_sum_sum_form.reyhan_sum_sum_form_data_source</item>
+            <item name="deps" xsi:type="string">reyhan_sum_sum_form.reyhan_sum_sum_form_data_source</item>
+        </item>
+        <item name="config" xsi:type="array">
+            <item name="dataScope" xsi:type="string">data</item>
+        </item>
+        <item name="template" xsi:type="string">templates/form/collapsible</item>
+        <item name="label" xsi:type="string" translate="true">Sum Form</item>
+        <item name="buttons" xsi:type="array">
+            <item name="back" xsi:type="string">Reyhan\Sum\Block\Adminhtml\Sum\Edit\BackButton</item>
+            <item name="delete" xsi:type="string">Reyhan\Sum\Block\Adminhtml\Sum\Edit\DeleteButton</item>
+            <item name="save" xsi:type="string">Reyhan\Sum\Block\Adminhtml\Sum\Edit\SaveButton</item>
+            <item name="save_and_continue" xsi:type="string">Reyhan\Sum\Block\Adminhtml\Sum\Edit\SaveAndContinueButton</item>
+        </item>
+    </argument>
+    <dataSource name="reyhan_sum_sum_form_data_source">
+        <argument name="dataProvider" xsi:type="configurableObject">
+            <argument name="class" xsi:type="string">Reyhan\Sum\Ui\Component\Form\Sum\DataProvider</argument>
+            <argument name="name" xsi:type="string">reyhan_sum_sum_form_data_source</argument>
+            <argument name="primaryFieldName" xsi:type="string">entity_id</argument>
+            <argument name="requestFieldName" xsi:type="string">entity_id</argument>
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="submit_url" xsi:type="url" path="*/*/save"/>
+                    <item name="validate_url" xsi:type="url" path="*/*/validate"/>
+                </item>
+            </argument>
+        </argument>
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+            </item>
+        </argument>
+    </dataSource>
+    <fieldset name="main_fieldset">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="label" xsi:type="string" translate="true">Main Information</item>
+            </item>
+        </argument>
+        <field name="store_id">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">number</item>
+                    <item name="formElement" xsi:type="string">hidden</item>
+                    <!--<item name="default" xsi:type="number">0</item>-->
+                    <item name="sortOrder" xsi:type="string">10</item>
+                    <item name="source" xsi:type="string">main_fieldset</item>
+                </item>
+            </argument>
+        </field>
+        <field name="entity_id">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="visible" xsi:type="boolean">false</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">main_fieldset</item>
+                </item>
+            </argument>
+        </field>
+        <field name="identifier">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string">Identifier</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">main_fieldset</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">true</item>
+                    </item>
+                    <item name="sortOrder" xsi:type="number">10</item>
+                    <item name="scopeLabel" xsi:type="string">[GLOBAL]</item>
+                </item>
+            </argument>
+        </field>
+        <!-- Add your fields here -->
+        <field name="value1">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">number</item>
+                    <item name="label" xsi:type="string">Value1</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="sortOrder" xsi:type="string"></item>
+                    <item name="default" xsi:type="number">0</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="integer" xsi:type="boolean">true</item>
+                    </item>
+                </item>
+            </argument>
+        </field>
+        
+        <field name="value2">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">number</item>
+                    <item name="label" xsi:type="string">Value2</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="sortOrder" xsi:type="string"></item>
+                    <item name="default" xsi:type="number">0</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="integer" xsi:type="boolean">true</item>
+                    </item>
+                </item>
+            </argument>
+        </field>
+        
+        <field name="operator">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="label" translate="true" xsi:type="string">Operator</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="sortOrder" xsi:type="string"></item>
+                </item>
+            </argument>
+        </field>
+        
+        <field name="total">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="dataType" xsi:type="string">number</item>
+                    <item name="label" xsi:type="string">Total</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="sortOrder" xsi:type="string"></item>
+                    <item name="default" xsi:type="number">0</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="integer" xsi:type="boolean">true</item>
+                    </item>
+                </item>
+            </argument>
+        </field>
+        
+    </fieldset>
+</form>
